@@ -1,13 +1,13 @@
 ---
 - name: Install required packages for SonarQube installation (Debian/Ubuntu)
-  apt:
+  ansible.builtin.apt:
     name: unzip
     state: present
     update_cache: yes
   when: ansible_os_family == "Debian"
 
 - name: Install required packages for SonarQube installation (CentOS/RedHat)
-  yum:
+  ansible.builtin.yum:
     name: unzip
     state: present
   when: ansible_os_family == "RedHat"

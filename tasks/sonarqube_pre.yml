@@ -1,4 +1,10 @@
 ---
+- name: Set memory limit to 262144
+  ansible.posix.sysctl:
+    name: "vm.max_map_count"
+    value: "262144"
+  become: su
+
 - name: Install required packages for SonarQube installation (Debian/Ubuntu)
   ansible.builtin.apt:
     name: unzip

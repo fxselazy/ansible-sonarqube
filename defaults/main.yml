@@ -10,7 +10,7 @@ sonarqube_config_file_path: "{{ sonarqube_install_dir }}/conf/sonar.properties"
 
 sonarqube_jdbc_url: jdbc:postgresql://localhost/sonar
 sonarqube_jdbc_username: sonarqube
-sonarqube_jdbc_password: sonarqube
+sonarqube_jdbc_password: CHANGEME
 sonarqube_web_host: "0.0.0.0"
 
 sonarqube_user: sonarqube
